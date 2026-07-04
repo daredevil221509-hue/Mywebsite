@@ -766,3 +766,13 @@ ul li{
     box-shadow:0 0 30px rgba(56,189,248,.6);
 
 }
+.portfolio{
+    padding:100px 10%;
+    text-align:center;
+}
+
+.portfolio h2{
+    color:#38bdf8;
+    margin-bottom:30px;
+    font-size:40px;
+}
