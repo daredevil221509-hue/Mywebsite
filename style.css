@@ -776,3 +776,25 @@ ul li{
     margin-bottom:30px;
     font-size:40px;
 }
+.testimonials{
+    padding:100px 10%;
+    text-align:center;
+}
+
+.testimonial-box{
+    max-width:700px;
+    margin:40px auto;
+    position:relative;
+}
+
+.testimonial{
+    display:none;
+    background:rgba(255,255,255,.05);
+    padding:30px;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.testimonial.active{
+    display:block;
+}
