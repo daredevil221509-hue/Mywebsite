@@ -3,23 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Website</title>
+    <title>Daredevil Business</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Welcome to My Website</h1>
+    <!-- Navbar -->
 
-    <p>Ye meri pehli website hai.</p>
+    <nav>
+        <h2 class="logo">DAREDEVIL</h2>
 
-    <button><button onclick="hello()">Click Me</button>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 
-<script>
-function hello(){
-    alert("Welcome to my website 😊");
-}
-</script></button>
+    <!-- Hero Section -->
 
+    <section class="hero">
+
+        <h1>Welcome to Daredevil</h1>
+
+        <p>
+            We Build Modern Websites For Your Business
+        </p>
+
+        <button>Contact Us</button>
+
+        <button class="btn2">Our Services</button>
+
+    </section>
+<!-- About Section -->
+
+<section class="about">
+
+    <h2>About Us</h2>
+
+    <p>
+        Daredevil ek modern business company hai jo professional websites,
+        business solutions aur digital services provide karti hai.
+        Hamara goal clients ko fast, secure aur attractive websites dena hai.
+    </p>
+
+</section>
+
+<!-- Services -->
+
+<section class="services">
+
+    <h2>Our Services</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🌐 Website Development</h3>
+            <p>Modern aur responsive websites banate hain.</p>
+        </div>
+
+        <div class="card">
+            <h3>📱 App Development</h3>
+            <p>Android aur Web Apps develop karte hain.</p>
+        </div>
+
+        <div class="card">
+            <h3>📈 Digital Marketing</h3>
+            <p>Business ko online grow karne me help karte hain.</p>
+        </div>
+
+    </div>
+
+</section>
+<!-- Contact Section -->
+
+<section class="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>Let's work together and grow your business.</p>
+
+    <div class="contact-box">
+
+        <div>
+            <h3>📞 Phone</h3>
+            <p>+91 91677 50675</p>
+        </div>
+
+        <div>
+            <h3>📧 Email</h3>
+            <p>@daredevil221509.com</p>
+        </div>
+
+        <div>
+            <h3>📍 Address</h3>
+            <p>India</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+    <h3>DAREDEVIL</h3>
+
+    <p>Building Modern Business Websites</p>
+
+    <p>© 2026 Daredevil. All Rights Reserved.</p>
+
+</footer>
+<!-- Scroll To Top Button -->
+
+<button id="topBtn" onclick="topFunction()">
+⬆
+</button>
+
+<script src="script.js"></script>
+
+<!-- Contact Form -->
+
+<section class="contact-form">
+
+    <h2>Send Us a Message</h2>
+
+    <form>
+
+        <input type="text" placeholder="Your Name" required>
+
+        <input type="email" placeholder="Your Email" required>
+
+        <textarea placeholder="Your Message" rows="5"></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+</section>
+
+<!-- WhatsApp Button -->
+
+<a href="https://wa.me/919167750675" class="whatsapp" target="_blank">
+    💬
+</a>
+
+<!-- Social Media -->
+
+<section class="social">
+
+    <h2>Follow Us</h2>
+
+    <div class="icons">
+
+        <a href="#">📘 Facebook</a>
+
+        <a href="#">📷 Instagram</a>
+
+        <a href="#">▶ YouTube</a>
+
+        <a href="#">💼 LinkedIn</a>
+
+    </div>
+
+</section>
+
+</body>
 </body>
 </html>
