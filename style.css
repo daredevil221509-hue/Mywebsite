@@ -766,3 +766,44 @@ ul li{
     box-shadow:0 0 30px rgba(56,189,248,.6);
 
 }
+footer{
+
+    background:#0f172a;
+
+    padding:50px 20px;
+
+    text-align:center;
+
+}
+
+.footer-links{
+
+    margin:20px 0;
+
+}
+
+.footer-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin:0 15px;
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:#38bdf8;
+
+}
+
+.copyright{
+
+    color:#94a3b8;
+
+    margin-top:20px;
+
+}
