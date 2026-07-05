@@ -222,3 +222,48 @@ window.addEventListener("load", function () {
     }
 
 });
+const words = [
+    "Website Developer",
+    "UI/UX Designer",
+    "Business Solutions",
+    "Digital Marketing"
+];
+
+let i = 0;
+let j = 0;
+let current = "";
+let isDeleting = false;
+
+function type() {
+
+    current = words[i];
+
+    if (!isDeleting) {
+        document.getElementById("typing").innerHTML =
+            current.substring(0, j++);
+
+        if (j > current.length) {
+            isDeleting = true;
+            setTimeout(type, 1000);
+            return;
+        }
+
+    } else {
+
+        document.getElementById("typing").innerHTML =
+            current.substring(0, j--);
+
+        if (j < 0) {
+            isDeleting = false;
+            i++;
+
+            if (i >= words.length) i = 0;
+        }
+
+    }
+
+    setTimeout(type, isDeleting ? 60 : 120);
+
+}
+
+type();

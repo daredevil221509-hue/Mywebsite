@@ -163,3 +163,10 @@ footer{
     .hero{padding-top:120px;text-align:center}
     .hero h1{font-size:36px}
 }
+.typing{
+    color:#42b9ff;
+    font-size:24px;
+    font-weight:bold;
+    margin-top:15px;
+    height:35px;
+}
