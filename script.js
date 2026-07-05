@@ -127,3 +127,34 @@ setInterval(() => {
     testimonials[current].classList.add("active");
 
 },3000);
+// ================= EMAILJS =================
+
+emailjs.init("v0eoWPk-0Zt4FB7N9");
+
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_81c7u1r",
+        "template_v563qkk",
+        this
+    )
+    .then(function () {
+
+        alert("✅ Message Sent Successfully!");
+
+        form.reset();
+
+    })
+    .catch(function (error) {
+
+        alert("❌ Failed to send message.");
+
+        console.log(error);
+
+    });
+
+});
