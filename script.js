@@ -1,160 +1,224 @@
-// Scroll Button
+// ==========================
+// Scroll To Top Button
+// ==========================
 
-let mybutton = document.getElementById("topBtn");
+const topBtn = document.getElementById("topBtn");
 
-window.onscroll = function () {
-
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-
-        mybutton.style.display = "block";
-
-    } else {
-
-        mybutton.style.display = "none";
-
-    }
-
-};
-
-function topFunction(){
-
-    window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
-
+if (topBtn) {
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
     });
 
+    topBtn.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
 }
+
+// ==========================
+// Dark Mode
+// ==========================
+
 const themeBtn = document.getElementById("themeBtn");
 
-themeBtn.onclick = function(){
+if (themeBtn) {
 
-    document.body.classList.toggle("light");
+    themeBtn.onclick = function () {
 
-    if(document.body.classList.contains("light")){
-        themeBtn.innerHTML="🌞";
-    }else{
-        themeBtn.innerHTML="🌙";
-    }
+        document.body.classList.toggle("light");
 
-}
-// Animated Counter
-
-const counters = document.querySelectorAll(".counter");
-
-counters.forEach(counter => {
-
-    const updateCounter = () => {
-
-        const target = +counter.getAttribute("data-target");
-
-        const count = +counter.innerText;
-
-        const increment = Math.ceil(target / 100);
-
-        if (count < target) {
-
-            counter.innerText = count + increment;
-
-            setTimeout(updateCounter, 20);
-
+        if (document.body.classList.contains("light")) {
+            themeBtn.innerHTML = "☀️";
         } else {
-
-            counter.innerText = target + "+";
-
+            themeBtn.innerHTML = "🌙";
         }
 
     };
 
-    updateCounter();
+}
 
-});
+// ==========================
+// Animated Counter
+// ==========================
+
+const counters = document.querySelectorAll(".counter");
+
+if (counters.length > 0) {
+
+    counters.forEach(counter => {
+
+        const updateCounter = () => {
+
+            const target = +counter.dataset.target;
+            const count = +counter.innerText;
+
+            const increment = Math.ceil(target / 100);
+
+            if (count < target) {
+
+                counter.innerText = count + increment;
+
+                setTimeout(updateCounter, 20);
+
+            } else {
+
+                counter.innerText = target + "+";
+
+            }
+
+        };
+
+        updateCounter();
+
+    });
+
+}
+
+// ==========================
 // Mobile Menu
+// ==========================
 
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 
-menuToggle.addEventListener("click", function(){
+if (menuToggle && navLinks) {
 
-    navLinks.classList.toggle("active");
+    menuToggle.addEventListener("click", function () {
 
-});
-// Scroll Animation
-
-const hiddenElements = document.querySelectorAll(
-".about,.services,.pricing,.contact,.hero"
-);
-
-const observer = new IntersectionObserver((entries)=>{
-
-    entries.forEach(entry=>{
-
-        if(entry.isIntersecting){
-
-            entry.target.classList.add("show");
-
-        }
+        navLinks.classList.toggle("active");
 
     });
 
-});
+}
 
-hiddenElements.forEach(el=>{
+// ==========================
+// Scroll Animation
+// ==========================
 
-    el.classList.add("hidden");
+const hiddenElements = document.querySelectorAll(
+".about,.services,.pricing,.contact,.hero,.portfolio,.testimonials"
+);
 
-    observer.observe(el);
+if (hiddenElements.length > 0) {
 
-});
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("show");
+
+            }
+
+        });
+
+    });
+
+    hiddenElements.forEach(el => {
+
+        el.classList.add("hidden");
+
+        observer.observe(el);
+
+    });
+
+}
+
+// ==========================
 // Testimonial Slider
+// ==========================
 
 const testimonials = document.querySelectorAll(".testimonial");
 
-let current = 0;
+if (testimonials.length > 0) {
 
-setInterval(() => {
+    let current = 0;
 
-    testimonials[current].classList.remove("active");
+    setInterval(() => {
 
-    current++;
+        testimonials[current].classList.remove("active");
 
-    if(current >= testimonials.length){
-        current = 0;
+        current++;
+
+        if (current >= testimonials.length) {
+
+            current = 0;
+
+        }
+
+        testimonials[current].classList.add("active");
+
+    }, 3000);
+
+}
+
+// ==========================
+// EmailJS Contact Form
+// ==========================
+
+if (typeof emailjs !== "undefined") {
+
+    emailjs.init("v0eoWPk-0Zt4FB7N9");
+
+    const form = document.getElementById("contact-form");
+
+    if (form) {
+
+        form.addEventListener("submit", function (e) {
+
+            e.preventDefault();
+
+            emailjs.sendForm(
+                "service_81c7u1r",
+                "template_v563qkk",
+                this
+            )
+
+            .then(function () {
+
+                alert("✅ Message Sent Successfully!");
+
+                form.reset();
+
+            })
+
+            .catch(function (error) {
+
+                console.log(error);
+
+                alert("❌ Failed to send message.");
+
+            });
+
+        });
+
     }
 
-    testimonials[current].classList.add("active");
+}
 
-},3000);
-// ================= EMAILJS =================
+// ==========================
+// Loader
+// ==========================
 
-emailjs.init("v0eoWPk-0Zt4FB7N9");
+window.addEventListener("load", function () {
 
-const form = document.getElementById("contact-form");
+    const loader = document.getElementById("loader");
 
-form.addEventListener("submit", function (e) {
+    if (loader) {
 
-    e.preventDefault();
+        setTimeout(function () {
 
-    emailjs.sendForm(
-        "service_81c7u1r",
-        "template_v563qkk",
-        this
-    )
-    .then(function () {
+            loader.style.display = "none";
 
-        alert("✅ Message Sent Successfully!");
+        }, 1000);
 
-        form.reset();
-
-    })
-    .catch(function (error) {
-
-        alert("❌ Failed to send message.");
-
-        console.log(error);
-
-    });
+    }
 
 });
