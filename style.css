@@ -857,3 +857,10 @@ button:hover{
     transform:translateY(-3px);
     box-shadow:0 12px 25px rgba(56,189,248,.35);
 }
+button{
+    transition:.3s;
+}
+
+button:active{
+    transform:scale(.96);
+}
