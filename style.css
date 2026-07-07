@@ -864,3 +864,111 @@ button{
 button:active{
     transform:scale(.96);
 }
+
+.cursor{
+    width:20px;
+    height:20px;
+    background:#38bdf8;
+    border-radius:50%;
+    position:fixed;
+    pointer-events:none;
+    transform:translate(-50%,-50%);
+    box-shadow:0 0 20px #38bdf8;
+    z-index:9999;
+}
+body{
+
+background:linear-gradient(-45deg,#0f172a,#111827,#1e293b,#0f172a);
+
+background-size:400% 400%;
+
+animation:bgAnimation 15s ease infinite;
+
+}
+
+@keyframes bgAnimation{
+
+0%{background-position:0% 50%;}
+
+50%{background-position:100% 50%;}
+
+100%{background-position:0% 50%;}
+
+}
+.card,
+.price-card,
+.review-card{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.card::before,
+.price-card::before,
+.review-card::before{
+
+content:"";
+
+position:absolute;
+
+top:-100%;
+
+left:-100%;
+
+width:60%;
+
+height:300%;
+
+background:rgba(255,255,255,.2);
+
+transform:rotate(25deg);
+
+transition:.7s;
+
+}
+
+.card:hover::before,
+.price-card:hover::before,
+.review-card:hover::before{
+
+left:150%;
+
+}
+section h2{
+
+animation:slideDown .8s ease;
+
+}
+
+@keyframes slideDown{
+
+from{
+
+opacity:0;
+
+transform:translateY(-30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+img{
+
+transition:.5s;
+
+}
+
+img:hover{
+
+transform:scale(1.05);
+
+}
