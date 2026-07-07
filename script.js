@@ -314,3 +314,20 @@ window.addEventListener("load", function () {
     }, 800);
 
 });
+// Newsletter Form
+
+const newsletter = document.querySelector(".newsletter-form");
+
+if (newsletter) {
+
+    newsletter.addEventListener("submit", function(e){
+
+        e.preventDefault();
+
+        alert("✅ Thank you for subscribing!");
+
+        newsletter.reset();
+
+    });
+
+}
