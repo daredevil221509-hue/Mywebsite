@@ -427,3 +427,32 @@ document.getElementById("totalPrice").innerHTML =
 "₹" + total.toLocaleString("en-IN");
 
 }
+const colors = document.querySelectorAll(".color");
+
+colors.forEach(color => {
+
+    color.addEventListener("click", () => {
+
+        const selected = color.dataset.color;
+
+        document.documentElement.style.setProperty(
+            "--primary",
+            selected
+        );
+
+        localStorage.setItem("themeColor", selected);
+
+    });
+
+});
+
+const savedColor = localStorage.getItem("themeColor");
+
+if(savedColor){
+
+document.documentElement.style.setProperty(
+"--primary",
+savedColor
+);
+
+}

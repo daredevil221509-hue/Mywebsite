@@ -1,3 +1,30 @@
+:root{
+    :root{
+    --primary: #38bdf8;
+}
+}
+.logo{
+    color:var(--primary);
+}
+
+button{
+    background:var(--primary);
+}
+
+.hero span{
+    color:var(--primary);
+}
+
+.stat-card h3{
+    color:var(--primary);
+}
+.white{
+    background:#ffffff;
+    border:2px solid #000;
+}
+.yellow{background:#eab308;}
+.pink{background:#ec4899;}
+.cyan{background:#06b6d4;}
 /* ===========================
    DAREDEVIL TECH - style.css
    =========================== */
@@ -29,7 +56,7 @@ nav{
     z-index:1000;
 }
 
-.logo{font-size:28px;font-weight:bold;color:#38bdf8}
+.logo{font-size:28px;font-weight:bold;color:var(--primary)}
 
 nav ul{
     display:flex;
@@ -42,7 +69,7 @@ nav a{
     text-decoration:none;
 }
 
-nav a:hover{color:#38bdf8}
+nav a:hover{color:var(--primary)}
 
 .hero{
     min-height:100vh;
@@ -59,7 +86,7 @@ nav a:hover{color:#38bdf8}
 .hero-right img{max-width:420px;width:100%;border-radius:20px}
 
 .hero h1{font-size:52px}
-.hero span{color:#38bdf8}
+.hero span{color:var(--primary)}
 .hero p{margin:20px 0;color:#cbd5e1}
 
 button{
@@ -67,13 +94,13 @@ button{
     border:none;
     border-radius:8px;
     cursor:pointer;
-    background:#38bdf8;
+    background:var(--primary);
     color:#fff;
 }
 
 .btn2{
     background:transparent;
-    border:2px solid #38bdf8;
+    border:2px solidvar:var(--primary);
     margin-left:12px;
 }
 
@@ -270,7 +297,7 @@ footer{
 
 .footer-box h2,
 .footer-box h3{
-    color:#38bdf8;
+    color:var(--primary);
     margin-bottom:15px;
 }
 
@@ -288,7 +315,7 @@ footer{
 }
 
 .footer-box a:hover{
-    color:#38bdf8;
+    color:var(--primary);
     padding-left:8px;
 }
 
@@ -310,7 +337,7 @@ footer{
 .skills h2{
     text-align:center;
     margin-bottom:40px;
-    color:#38bdf8;
+    color:var(--primary);
 }
 
 .skill{
@@ -376,7 +403,7 @@ footer{
 }
 
 .achievement-card h1{
-    color:#38bdf8;
+    color:var(--primary);
     font-size:45px;
 }
 
@@ -404,7 +431,7 @@ footer{
 }
 
 .client-logo:hover{
-    background:#38bdf8;
+    background:var(--primary);
     color:#fff;
 }
 /* Location */
@@ -416,7 +443,7 @@ footer{
 
 .location h2{
     margin-bottom:30px;
-    color:#38bdf8;
+    color:var(--primary);
 }
 
 /* Business Hours */
@@ -446,7 +473,7 @@ footer{
     left:0;
     width:0%;
     height:5px;
-    background:linear-gradient(90deg,#38bdf8,#06b6d4);
+    background:linear-gradient(90deg,var(--primary),#06b6d4);
     z-index:9999;
 }
 
@@ -486,14 +513,14 @@ nav.scrolled{
     width:70px;
     height:70px;
     border:6px solid rgba(255,255,255,.15);
-    border-top:6px solid #38bdf8;
+    border-top:6px solid var(--primary);
     border-radius:50%;
     animation:spin 1s linear infinite;
 }
 
 #loader h2{
     margin-top:25px;
-    color:#38bdf8;
+    color:var(--primary);
     letter-spacing:4px;
 }
 
@@ -532,7 +559,7 @@ body{
 }
 
 .statistics h2{
-    color:#38bdf8;
+    color:var(--primary);
     margin-bottom:40px;
     font-size:36px;
 }
@@ -558,7 +585,7 @@ body{
 
 .stat-card h3{
     font-size:42px;
-    color:#38bdf8;
+    color:var(--primary);
     margin-bottom:10px;
 }
 
@@ -574,7 +601,7 @@ body{
 
 .why-us h2{
     font-size:38px;
-    color:#38bdf8;
+    color:var(--primary);
     margin-bottom:40px;
 }
 
@@ -598,7 +625,7 @@ body{
 }
 
 .why-card h3{
-    color:#38bdf8;
+    color:var(--primary);
     margin-bottom:15px;
 }
 
@@ -618,7 +645,7 @@ body{
 }
 
 .newsletter h2{
-    color:#38bdf8;
+    color:var(--primary);
     font-size:36px;
     margin-bottom:15px;
 }
@@ -649,7 +676,7 @@ body{
     padding:15px 30px;
     border:none;
     border-radius:50px;
-    background:#38bdf8;
+    background:var(--primary);
     color:#fff;
     font-weight:bold;
     cursor:pointer;
@@ -668,7 +695,7 @@ body{
 
 .faq h2{
     text-align:center;
-    color:#38bdf8;
+    color:var(--primary);
     margin-bottom:40px;
 }
 
@@ -720,7 +747,7 @@ body{
 }
 
 .awards h2{
-    color:#38bdf8;
+    color:var(--primary);
     font-size:38px;
     margin-bottom:40px;
 }
@@ -750,7 +777,7 @@ body{
 }
 
 .award-card h3{
-    color:#38bdf8;
+    color:var(--primary);
     margin-bottom:12px;
 }
 
@@ -772,7 +799,7 @@ body{
 }
 
 .hero-buttons button:first-child{
-    background:#38bdf8;
+    background:var(--primary);
     color:#fff;
     box-shadow:0 10px 25px rgba(56,189,248,.35);
 }
@@ -784,12 +811,12 @@ body{
 
 .hero-buttons .btn2{
     background:transparent;
-    border:2px solid #38bdf8;
-    color:#38bdf8;
+    border:2px solid var(--primary);
+    color:var(--primary);
 }
 
 .hero-buttons .btn2:hover{
-    background:#38bdf8;
+    background:var(--primary);
     color:#fff;
 }
 
@@ -845,7 +872,7 @@ section h2{
     font-size:38px;
     margin-bottom:20px;
     text-align:center;
-    background:linear-gradient(90deg,#38bdf8,#60a5fa);
+    background:linear-gradient(90deg,var(--primary),#60a5fa);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
@@ -969,7 +996,7 @@ transform:scale(1.05);
     left:0;
     width:0%;
     height:4px;
-    background:linear-gradient(90deg,#38bdf8,#0ea5e9,#60a5fa);
+    background:linear-gradient(90deg,var(--primary),#0ea5e9,#60a5fa);
     z-index:99999;
     transition:width .1s linear;
 }
@@ -1077,7 +1104,7 @@ transform:scale(1.05);
 
 .stat-card h3{
     font-size:42px;
-    color:#38bdf8;
+    color:var(--primary);
     margin-bottom:10px;
 }
 
@@ -1105,7 +1132,7 @@ transform:scale(1.05);
 
 .filter-btn.active,
 .filter-btn:hover{
-    background:#38bdf8;
+    background:var(--primary);
 }
 /* Website Calculator */
 
@@ -1141,7 +1168,25 @@ transform:scale(1.05);
 }
 
 #totalPrice{
-    color:#38bdf8;
+    color:var(--primary);
     margin:25px 0;
     font-size:42px;
 }
+.theme-colors{
+    display:flex;
+    gap:10px;
+    margin-left:15px;
+}
+
+.color{
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    cursor:pointer;
+    border:2px solid white;
+}
+
+.blue{background:var(--primary);}
+.purple{background:#8b5cf6;}
+.green{background:#22c55e;}
+.red{background:#ef4444;}
