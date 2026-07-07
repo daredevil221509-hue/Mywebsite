@@ -522,3 +522,46 @@ body{
     }
 
 }
+/* ==========================
+   Statistics Section
+========================== */
+
+.statistics{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.statistics h2{
+    color:#38bdf8;
+    margin-bottom:40px;
+    font-size:36px;
+}
+
+.statistics-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.stat-card{
+    background:#1e293b;
+    padding:35px 20px;
+    border-radius:16px;
+    transition:.3s;
+    border:1px solid rgba(56,189,248,.2);
+}
+
+.stat-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(56,189,248,.25);
+}
+
+.stat-card h3{
+    font-size:42px;
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+.stat-card p{
+    color:#cbd5e1;
+}
