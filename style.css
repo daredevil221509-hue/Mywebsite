@@ -814,50 +814,46 @@ body{
     }
 
 }
-/* ================= FOOTER ================= */
+/* ==========================
+   Glassmorphism Effect
+========================== */
 
-.footer{
-    background:#020617;
-    padding:70px 8% 30px;
+.card,
+.price-card,
+.review-card,
+.why-card,
+.stat-card,
+.award-card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:18px;
+    transition:all .35s ease;
 }
 
-.footer-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:40px;
+.card:hover,
+.price-card:hover,
+.review-card:hover,
+.why-card:hover,
+.stat-card:hover,
+.award-card:hover{
+    transform:translateY(-10px) scale(1.02);
+    box-shadow:0 20px 40px rgba(56,189,248,.25);
 }
-
-.footer-box h2,
-.footer-box h3{
-    color:#38bdf8;
-    margin-bottom:15px;
-}
-
-.footer-box p{
-    color:#cbd5e1;
-    margin:8px 0;
-}
-
-.footer-box a{
-    display:block;
-    color:#cbd5e1;
-    text-decoration:none;
-    margin:10px 0;
-    transition:.3s;
-}
-
-.footer-box a:hover{
-    color:#38bdf8;
-    padding-left:8px;
-}
-
-.footer hr{
-    margin:35px 0;
-    border:none;
-    border-top:1px solid rgba(255,255,255,.1);
-}
-
-.copyright{
+section h2{
+    font-size:38px;
+    margin-bottom:20px;
     text-align:center;
-    color:#94a3b8;
+    background:linear-gradient(90deg,#38bdf8,#60a5fa);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+button{
+    transition:all .3s ease;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 25px rgba(56,189,248,.35);
 }
