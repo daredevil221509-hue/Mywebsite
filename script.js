@@ -417,3 +417,19 @@ item.style.display="none";
 });
 
 });
+function calculatePrice(){
+
+let total =
+Number(document.getElementById("websiteType").value);
+
+document.querySelectorAll(".check input:checked")
+.forEach(item=>{
+
+total += Number(item.value);
+
+});
+
+document.getElementById("totalPrice").innerHTML =
+"₹" + total.toLocaleString("en-IN");
+
+}

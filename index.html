@@ -243,6 +243,43 @@
 
 </section>
 
+<section class="calculator">
+
+    <h2>Website Price Calculator</h2>
+
+    <p>Select your requirements and get an estimated price.</p>
+
+    <div class="calc-box">
+
+        <label>Website Type</label>
+
+        <select id="websiteType">
+            <option value="9999">Business Website - ₹9,999</option>
+            <option value="14999">Portfolio Website - ₹14,999</option>
+            <option value="29999">E-Commerce Website - ₹29,999</option>
+        </select>
+
+        <label>Extra Features</label>
+
+        <div class="check">
+            <label><input type="checkbox" value="3000"> Admin Panel (+₹3,000)</label>
+            <label><input type="checkbox" value="2000"> SEO Optimization (+₹2,000)</label>
+            <label><input type="checkbox" value="4000"> Payment Gateway (+₹4,000)</label>
+            <label><input type="checkbox" value="1500"> Contact Form (+₹1,500)</label>
+        </div>
+
+        <h3>Total Estimate</h3>
+
+        <h1 id="totalPrice">₹9,999</h1>
+
+        <button onclick="calculatePrice()">
+            Calculate Price
+        </button>
+
+    </div>
+
+</section>
+
 <section class="quote">
 
     <h2>Request a Free Quote</h2>
