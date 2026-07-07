@@ -1190,3 +1190,97 @@ transform:scale(1.05);
 .purple{background:#8b5cf6;}
 .green{background:#22c55e;}
 .red{background:#ef4444;}
+
+/* ==========================
+   Premium Sidebar
+========================== */
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+
+    left:-300px;
+
+    width:280px;
+
+    height:100%;
+
+    background:#111827;
+
+    padding:30px;
+
+    transition:.4s;
+
+    z-index:2000;
+
+}
+
+.sidebar.active{
+
+    left:0;
+
+}
+
+.sidebar h2{
+
+    color:var(--primary);
+
+    margin-bottom:30px;
+
+}
+
+.sidebar a{
+
+    display:block;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:14px 0;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.sidebar a:hover{
+
+    color:var(--primary);
+
+    padding-left:10px;
+
+}
+
+.close-btn{
+
+    font-size:34px;
+
+    cursor:pointer;
+
+    float:right;
+
+}
+
+.overlay-bg{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.5);
+
+    display:none;
+
+    z-index:1500;
+
+}
+
+.overlay-bg.active{
+
+    display:block;
+
+}
