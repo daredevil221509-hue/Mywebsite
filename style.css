@@ -438,3 +438,28 @@ footer{
     margin:15px 0;
     font-size:18px;
 }
+/* Scroll Progress Bar */
+
+#progressBar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:0%;
+    height:5px;
+    background:linear-gradient(90deg,#38bdf8,#06b6d4);
+    z-index:9999;
+}
+
+/* Premium Navbar */
+
+nav{
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    background:rgba(15,23,42,.85);
+    transition:.3s;
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+}
+
+nav.scrolled{
+    background:rgba(2,6,23,.95);
+}

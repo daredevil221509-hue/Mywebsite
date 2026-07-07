@@ -267,3 +267,35 @@ function type() {
 }
 
 type();
+// Scroll Progress Bar
+
+window.addEventListener("scroll", function () {
+
+    const winScroll =
+        document.documentElement.scrollTop ||
+        document.body.scrollTop;
+
+    const height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+    const scrolled = (winScroll / height) * 100;
+
+    document.getElementById("progressBar").style.width =
+        scrolled + "%";
+
+});
+
+// Navbar Blur on Scroll
+
+window.addEventListener("scroll", function () {
+
+    const nav = document.querySelector("nav");
+
+    if (window.scrollY > 50) {
+        nav.classList.add("scrolled");
+    } else {
+        nav.classList.remove("scrolled");
+    }
+
+});
