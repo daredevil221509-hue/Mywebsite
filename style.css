@@ -757,3 +757,60 @@ body{
 .award-card p{
     color:#cbd5e1;
 }
+/* ==========================
+   Premium Hero Buttons
+========================== */
+
+.hero-buttons button{
+    padding:15px 32px;
+    border:none;
+    border-radius:50px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:all .3s ease;
+}
+
+.hero-buttons button:first-child{
+    background:#38bdf8;
+    color:#fff;
+    box-shadow:0 10px 25px rgba(56,189,248,.35);
+}
+
+.hero-buttons button:first-child:hover{
+    transform:translateY(-5px);
+    box-shadow:0 18px 35px rgba(56,189,248,.45);
+}
+
+.hero-buttons .btn2{
+    background:transparent;
+    border:2px solid #38bdf8;
+    color:#38bdf8;
+}
+
+.hero-buttons .btn2:hover{
+    background:#38bdf8;
+    color:#fff;
+}
+
+/* Floating Hero Image */
+
+.hero-right img{
+    animation:floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-18px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
