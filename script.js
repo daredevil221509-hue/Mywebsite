@@ -368,3 +368,20 @@ window.addEventListener("scroll", () => {
         progress + "%";
 
 });
+// Quote Form
+
+const quoteForm = document.getElementById("quoteForm");
+
+if(quoteForm){
+
+quoteForm.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("✅ Your quote request has been submitted.");
+
+quoteForm.reset();
+
+});
+
+}

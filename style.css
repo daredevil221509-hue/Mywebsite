@@ -984,3 +984,29 @@ transform:scale(1.05);
     z-index:99999;
     transition:width .1s linear;
 }
+.quote{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.quote form{
+    max-width:700px;
+    margin:30px auto;
+}
+
+.quote input,
+.quote select,
+.quote textarea{
+    width:100%;
+    padding:15px;
+    margin:12px 0;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.quote button{
+    width:100%;
+    padding:15px;
+    font-size:18px;
+}
