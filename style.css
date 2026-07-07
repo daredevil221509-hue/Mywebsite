@@ -865,17 +865,6 @@ button:active{
     transform:scale(.96);
 }
 
-.cursor{
-    width:20px;
-    height:20px;
-    background:#38bdf8;
-    border-radius:50%;
-    position:fixed;
-    pointer-events:none;
-    transform:translate(-50%,-50%);
-    box-shadow:0 0 20px #38bdf8;
-    z-index:9999;
-}
 body{
 
 background:linear-gradient(-45deg,#0f172a,#111827,#1e293b,#0f172a);
