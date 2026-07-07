@@ -407,3 +407,34 @@ footer{
     background:#38bdf8;
     color:#fff;
 }
+/* Location */
+
+.location{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.location h2{
+    margin-bottom:30px;
+    color:#38bdf8;
+}
+
+/* Business Hours */
+
+.hours{
+    padding:70px 8%;
+    text-align:center;
+}
+
+.hours-box{
+    max-width:500px;
+    margin:auto;
+    background:#1e293b;
+    padding:30px;
+    border-radius:15px;
+}
+
+.hours-box p{
+    margin:15px 0;
+    font-size:18px;
+}
