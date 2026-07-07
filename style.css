@@ -1096,3 +1096,25 @@ transform:scale(1.05);
     color:#cbd5e1;
     font-size:18px;
 }
+/* Portfolio Filter */
+
+.filter-buttons{
+    text-align:center;
+    margin:35px 0;
+}
+
+.filter-btn{
+    margin:8px;
+    padding:12px 24px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    background:#1e293b;
+    color:white;
+    transition:.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover{
+    background:#38bdf8;
+}
