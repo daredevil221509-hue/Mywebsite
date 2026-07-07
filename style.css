@@ -814,3 +814,50 @@ body{
     }
 
 }
+/* ================= FOOTER ================= */
+
+.footer{
+    background:#020617;
+    padding:70px 8% 30px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+}
+
+.footer-box h2,
+.footer-box h3{
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+.footer-box p{
+    color:#cbd5e1;
+    margin:8px 0;
+}
+
+.footer-box a{
+    display:block;
+    color:#cbd5e1;
+    text-decoration:none;
+    margin:10px 0;
+    transition:.3s;
+}
+
+.footer-box a:hover{
+    color:#38bdf8;
+    padding-left:8px;
+}
+
+.footer hr{
+    margin:35px 0;
+    border:none;
+    border-top:1px solid rgba(255,255,255,.1);
+}
+
+.copyright{
+    text-align:center;
+    color:#94a3b8;
+}
