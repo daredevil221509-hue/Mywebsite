@@ -203,25 +203,6 @@ if (typeof emailjs !== "undefined") {
 
 }
 
-// ==========================
-// Loader
-// ==========================
-
-window.addEventListener("load", function () {
-
-    const loader = document.getElementById("loader");
-
-    if (loader) {
-
-        setTimeout(function () {
-
-            loader.style.display = "none";
-
-        }, 1000);
-
-    }
-
-});
 const words = [
     "Website Developer",
     "UI/UX Designer",
@@ -299,21 +280,7 @@ window.addEventListener("scroll", function () {
     }
 
 });
-// Premium Loader
 
-window.addEventListener("load", function () {
-
-    const loader = document.getElementById("loader");
-
-    loader.style.opacity = "0";
-
-    setTimeout(() => {
-
-        loader.style.display = "none";
-
-    }, 800);
-
-});
 // Newsletter Form
 
 const newsletter = document.querySelector(".newsletter-form");
@@ -337,14 +304,21 @@ const faqItems = document.querySelectorAll(".faq-item");
 
 faqItems.forEach(item => {
 
+   faqItems.forEach(item => {
+
     const question = item.querySelector(".faq-question");
 
-    question.addEventListener("click", () => {
+    if(question){
 
-        item.classList.toggle("active");
+        question.addEventListener("click", () => {
 
-    });
+            item.classList.toggle("active");
 
+        });
+
+    }
+
+});
 });
 // Scroll Progress Bar
 
@@ -448,11 +422,22 @@ colors.forEach(color => {
 
 const savedColor = localStorage.getItem("themeColor");
 
-if(savedColor){
-
-document.documentElement.style.setProperty(
-"--primary",
-savedColor
-);
-
+if (savedColor) {
+    document.documentElement.style.setProperty(
+        "--primary",
+        savedColor
+    );
 }
+window.addEventListener("load", function () {
+
+    const loader = document.getElementById("loader");
+
+    if (loader) {
+        loader.style.opacity = "0";
+
+        setTimeout(() => {
+            loader.style.display = "none";
+        }, 800);
+    }
+
+});
