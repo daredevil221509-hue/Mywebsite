@@ -1508,3 +1508,40 @@ display:none;
     color:#bfc9d9;
     font-size:17px;
 }
+/* ==========================
+   Version 77 - Visitor Counter
+========================== */
+
+.visitor-box{
+
+margin-top:20px;
+
+padding:15px;
+
+border-radius:12px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
+display:inline-block;
+
+}
+
+#onlineStatus{
+
+color:#00ff88;
+
+margin-bottom:8px;
+
+}
+
+#visitorCount{
+
+font-size:18px;
+
+font-weight:bold;
+
+color:#fff;
+
+}

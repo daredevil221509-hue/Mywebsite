@@ -535,3 +535,27 @@ function updateDateTime() {
 updateDateTime();
 
 setInterval(updateDateTime, 1000);
+
+// ==========================
+// Version 77 - Visitor Counter
+// ==========================
+
+let visitors = localStorage.getItem("visitorCount");
+
+if (!visitors) {
+
+    visitors = 1000;
+
+}
+
+visitors++;
+
+localStorage.setItem("visitorCount", visitors);
+
+const visitorEl = document.getElementById("visitorCount");
+
+if (visitorEl) {
+
+    visitorEl.innerHTML = "👥 Visitors: " + visitors;
+
+}
