@@ -1392,3 +1392,49 @@ display:none;
 }
 
 }
+/* ==========================
+   Version 51 - Testimonials
+========================== */
+
+.testimonials{
+    text-align:center;
+    padding:80px 8%;
+}
+
+.testimonial-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.testimonial-card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    transition:.3s;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.testimonial-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+.testimonial-card img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+.company{
+    color:#94a3b8;
+    margin:10px 0;
+}
+
+.stars{
+    font-size:20px;
+    margin:12px 0;
+}
