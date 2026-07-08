@@ -1331,3 +1331,64 @@ transform:scale(1.05);
     font-size:28px;
     cursor:pointer;
 }
+/* ==========================
+   Version 50 - Sticky Contact Bar
+========================== */
+
+.sticky-contact{
+
+position:fixed;
+
+bottom:0;
+
+left:0;
+
+width:100%;
+
+display:flex;
+
+justify-content:space-around;
+
+align-items:center;
+
+background:#111827;
+
+padding:12px 0;
+
+z-index:9999;
+
+box-shadow:0 -5px 20px rgba(0,0,0,.3);
+
+}
+
+.sticky-contact a{
+
+color:#fff;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.sticky-contact a:hover{
+
+color:var(--primary);
+
+transform:translateY(-3px);
+
+}
+
+/* Desktop par hide */
+
+@media(min-width:992px){
+
+.sticky-contact{
+
+display:none;
+
+}
+
+}
