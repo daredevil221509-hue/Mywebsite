@@ -484,41 +484,54 @@ if (popup && closePopup) {
 
 }
 // ==========================
-// Version 74 - Live Clock & Greeting
+// Live Greeting + Clock + Date
 // ==========================
 
-function updateClock() {
+function updateDateTime() {
 
     const now = new Date();
 
-    const hour = now.getHours();
-
+    // Greeting
     let greeting = "";
+
+    const hour = now.getHours();
 
     if (hour >= 5 && hour < 12) {
         greeting = "🌅 Good Morning";
-    } 
-    else if (hour >= 12 && hour < 17) {
+    } else if (hour >= 12 && hour < 17) {
         greeting = "☀️ Good Afternoon";
-    } 
-    else if (hour >= 17 && hour < 20) {
+    } else if (hour >= 17 && hour < 20) {
         greeting = "🌇 Good Evening";
-    } 
-    else {
+    } else {
         greeting = "🌙 Good Night";
     }
 
-    const time = now.toLocaleTimeString();
+    // Time
+    const time = now.toLocaleTimeString("en-IN");
 
-    const greetingEl = document.getElementById("greeting");
-    const clockEl = document.getElementById("clock");
+    // Date
+    const date = now.toLocaleDateString("en-IN", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+    });
 
-    if(greetingEl) greetingEl.innerHTML = greeting;
+    // Update HTML
+    if (document.getElementById("greeting")) {
+        document.getElementById("greeting").innerHTML = greeting;
+    }
 
-    if(clockEl) clockEl.innerHTML = time;
+    if (document.getElementById("clock")) {
+        document.getElementById("clock").innerHTML = "🕒 " + time;
+    }
+
+    if (document.getElementById("todayDate")) {
+        document.getElementById("todayDate").innerHTML = "📅 " + date;
+    }
 
 }
 
-setInterval(updateClock,1000);
+updateDateTime();
 
-updateClock();
+setInterval(updateDateTime, 1000);
