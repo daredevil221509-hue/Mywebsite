@@ -464,3 +464,22 @@ if (sidebarBtn && sidebar && overlay && closeSidebar) {
     });
 
 }
+const popup = document.getElementById("welcomePopup");
+const closePopup = document.getElementById("closePopup");
+
+if (popup && closePopup) {
+
+    if (!localStorage.getItem("popupShown")) {
+
+        setTimeout(() => {
+            popup.style.display = "flex";
+        }, 2000);
+
+        localStorage.setItem("popupShown", "yes");
+    }
+
+    closePopup.addEventListener("click", () => {
+        popup.style.display = "none";
+    });
+
+}
