@@ -1484,3 +1484,23 @@ display:none;
     color:#cbd5e1;
     line-height:1.6;
 }
+/* ==========================
+   Version 74 - Live Clock
+========================== */
+
+.live-info{
+    margin:20px 0;
+}
+
+.live-info h3{
+    font-size:28px;
+    color:var(--primary);
+    margin-bottom:8px;
+}
+
+.live-info p{
+    font-size:20px;
+    font-weight:600;
+    color:#ffffff;
+    letter-spacing:2px;
+}

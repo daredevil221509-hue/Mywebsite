@@ -483,3 +483,42 @@ if (popup && closePopup) {
     });
 
 }
+// ==========================
+// Version 74 - Live Clock & Greeting
+// ==========================
+
+function updateClock() {
+
+    const now = new Date();
+
+    const hour = now.getHours();
+
+    let greeting = "";
+
+    if (hour >= 5 && hour < 12) {
+        greeting = "🌅 Good Morning";
+    } 
+    else if (hour >= 12 && hour < 17) {
+        greeting = "☀️ Good Afternoon";
+    } 
+    else if (hour >= 17 && hour < 20) {
+        greeting = "🌇 Good Evening";
+    } 
+    else {
+        greeting = "🌙 Good Night";
+    }
+
+    const time = now.toLocaleTimeString();
+
+    const greetingEl = document.getElementById("greeting");
+    const clockEl = document.getElementById("clock");
+
+    if(greetingEl) greetingEl.innerHTML = greeting;
+
+    if(clockEl) clockEl.innerHTML = time;
+
+}
+
+setInterval(updateClock,1000);
+
+updateClock();
