@@ -1,39 +1,74 @@
-const CACHE_NAME = "daredevil-tech-v1";
+const CACHE_NAME = "daredevil-tech-v2";
 
 const urlsToCache = [
-  "./",
-  "./index.html",
-  "./offline.html",
-  "./style.css",
-  "./script.js",
-  "./manifest.json"
+    "./",
+    "./index.html",
+    "./style.css",
+    "./script.js",
+    "./manifest.json",
+    "./offline.html"
 ];
 
+// Install
 self.addEventListener("install", event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(urlsToCache);
-    })
-  );
+
+    self.skipWaiting();
+
+    event.waitUntil(
+
+        caches.open(CACHE_NAME)
+
+        .then(cache => cache.addAll(urlsToCache))
+
+    );
+
 });
+
+// Activate
+
+self.addEventListener("activate", event => {
+
+    event.waitUntil(
+
+        caches.keys().then(cacheNames => {
+
+            return Promise.all(
+
+                cacheNames.map(cache => {
+
+                    if (cache !== CACHE_NAME) {
+
+                        return caches.delete(cache);
+
+                    }
+
+                })
+
+            );
+
+        })
+
+    );
+
+    self.clients.claim();
+
+});
+
+// Fetch
 
 self.addEventListener("fetch", event => {
 
     event.respondWith(
 
-        fetch(event.request)
+        caches.match(event.request)
 
-        .catch(() => {
+        .then(response => {
 
-            return caches.match(event.request)
-
-            .then(response => {
-
-                return response || caches.match("./offline.html");
-
-            });
+            return response || fetch(event.request);
 
         })
+
+        .catch(() => caches.match("./offline.html"))
 
     );
 

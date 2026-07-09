@@ -583,6 +583,15 @@ if ("serviceWorker" in navigator) {
     });
 
 }
+
+// Auto Reload After Update
+
+navigator.serviceWorker.addEventListener("controllerchange", () => {
+
+    window.location.reload();
+
+});
+
 // ==========================
 // Version 101 - Install Button
 // ==========================
