@@ -3,6 +3,7 @@ const CACHE_NAME = "daredevil-tech-v1";
 const urlsToCache = [
   "./",
   "./index.html",
+  "./offline.html",
   "./style.css",
   "./script.js",
   "./manifest.json"
@@ -17,9 +18,23 @@ self.addEventListener("install", event => {
 });
 
 self.addEventListener("fetch", event => {
-  event.respondWith(
-    caches.match(event.request).then(response => {
-      return response || fetch(event.request);
-    })
-  );
+
+    event.respondWith(
+
+        fetch(event.request)
+
+        .catch(() => {
+
+            return caches.match(event.request)
+
+            .then(response => {
+
+                return response || caches.match("./offline.html");
+
+            });
+
+        })
+
+    );
+
 });
